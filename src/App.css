@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.result ul li {
+  list-style: none;
+}
+.result ul li img {
+  width: 200px;
+}

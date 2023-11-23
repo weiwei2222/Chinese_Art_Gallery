@@ -10,6 +10,7 @@ function Home() {
 
   const getArt = async (searchTerm) => {
     const url = `https://openaccess-api.clevelandart.org/api/artworks/?q=${searchTerm}&department=Chinese%20Art&has_image=1&skip=0&limit=10`;
+    console.log(url);
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -20,15 +21,24 @@ function Home() {
   };
 
   useEffect(() => {
-    getArt();
+    const artArray = [
+      "flower",
+      "sun",
+      "luke",
+      "mountain",
+      "water",
+      "birds",
+      "Picture",
+      "Woman",
+    ];
+    getArt(artArray[Math.floor(Math.random() * artArray.length)]);
   }, []);
 
   console.log(art);
   return (
     <div>
       <Form artsearch={getArt} />
-      <Result />
-      <Footer />
+      {art ? <Result artObj={art} /> : "loading"}
     </div>
   );
 }

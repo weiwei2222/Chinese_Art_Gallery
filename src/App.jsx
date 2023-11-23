@@ -4,8 +4,10 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import History from "./pages/History";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,7 +18,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/history" element={<History />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

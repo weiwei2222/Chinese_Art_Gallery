@@ -9,6 +9,13 @@ function About() {
         understand and engage with the world’s great art while honoring the
         highest aesthetic, intellectual, and professional standards.
       </p>
+      <p>
+        This website use{" "}
+        <a href="https://openaccess-api.clevelandart.org/" target="_blank">
+          The Cleveland Museum of Art free API
+        </a>
+        .
+      </p>
     </div>
   );
 }
