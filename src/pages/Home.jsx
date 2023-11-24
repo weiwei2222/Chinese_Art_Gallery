@@ -9,7 +9,7 @@ function Home() {
 
   const getArt = async (searchTerm) => {
     const url = `https://openaccess-api.clevelandart.org/api/artworks/?q=${searchTerm}&department=Chinese%20Art&has_image=1&skip=${page}&limit=10`;
-    console.log(url);
+
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -33,12 +33,11 @@ function Home() {
     getArt(artArray[Math.floor(Math.random() * artArray.length)]);
   }, []);
 
-  console.log(art);
   return (
-    <div>
+    <main>
       <Form artsearch={getArt} />
       {art ? <Results artObj={art} /> : "loading"}
-    </div>
+    </main>
   );
 }
 
