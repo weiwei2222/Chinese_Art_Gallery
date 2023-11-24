@@ -8,10 +8,9 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import History from "./pages/History";
+import Detail from "./components/detail";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div>
       <Nav />
@@ -19,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/history" element={<History />} />
+        <Route path="/:id" element={<Detail />} />
       </Routes>
       <Footer />
     </div>

@@ -1,8 +1,13 @@
-# React + Vite
+# React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1>Chinese Art Gallery</h1>
 
-Currently, two official plugins are available:
+# rescours
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://articles.wesionary.team/how-to-implement-infinite-scroll-using-react-query-5fd7c425908f
+
+https://dev.to/brainiacneit/simplify-infinite-loading-with-react-query-48oj
+
+https://cangsdarm.github.io/react-query-web-i18n/react/getstarted/installation/
+
+https://github.com/superdev163/react-query-poc/blob/master/src/App.tsx

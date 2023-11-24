@@ -1,15 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Nav from "../components/Nav";
 import Form from "../components/Form";
-import Result from "../components/Result";
-import Footer from "../components/Footer";
+import Results from "../components/Results";
 
 function Home() {
   const [art, setArt] = useState(null);
+  const page = 10;
 
   const getArt = async (searchTerm) => {
-    const url = `https://openaccess-api.clevelandart.org/api/artworks/?q=${searchTerm}&department=Chinese%20Art&has_image=1&skip=0&limit=10`;
+    const url = `https://openaccess-api.clevelandart.org/api/artworks/?q=${searchTerm}&department=Chinese%20Art&has_image=1&skip=${page}&limit=10`;
     console.log(url);
     try {
       const response = await fetch(url);
@@ -38,7 +37,7 @@ function Home() {
   return (
     <div>
       <Form artsearch={getArt} />
-      {art ? <Result artObj={art} /> : "loading"}
+      {art ? <Results artObj={art} /> : "loading"}
     </div>
   );
 }
