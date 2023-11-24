@@ -9,7 +9,7 @@ function OneArt({ one }) {
           <img src={one.images.web.url} />
         </span>
         <h3>{one.title}</h3>
-        <div>Title in original language:{one.title_in_original_language}</div>
+        <div>{one.title_in_original_language}</div>
         <div>Culture:{one.culture}</div>
       </Link>
     </li>

@@ -29,6 +29,9 @@ function Home() {
       "birds",
       "Picture",
       "Woman",
+      "Orchid",
+      "Landscapes",
+      "Leaf",
     ];
     getArt(artArray[Math.floor(Math.random() * artArray.length)]);
   }, []);
