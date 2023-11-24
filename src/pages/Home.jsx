@@ -34,10 +34,10 @@ function Home() {
   }, []);
 
   return (
-    <main>
+    <>
       <Form artsearch={getArt} />
       {art ? <Results artObj={art} /> : "loading"}
-    </main>
+    </>
   );
 }
 
