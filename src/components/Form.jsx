@@ -1,26 +1,13 @@
 import { useState, useEffect } from "react";
 
-function Form(props) {
-  const [formData, setFormData] = useState({
-    searchterm: "",
-  });
-
-  const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    props.artsearch(formData.searchterm);
-  };
-
+function Form({ formData, addhandleChange, addhandleSubmit }) {
   return (
     <div className="search">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={addhandleSubmit}>
         <input
           type="text"
           name="searchterm"
-          onChange={handleChange}
+          onChange={addhandleChange}
           value={formData.searchterm}
         />
         <input type="submit" value="search" />
