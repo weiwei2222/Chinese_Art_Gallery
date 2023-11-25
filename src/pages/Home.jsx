@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Form from "../components/Form";
 import Results from "../pages/Results";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [art, setArt] = useState(null);
@@ -39,7 +40,13 @@ function Home() {
   return (
     <>
       <Form artsearch={getArt} />
-      {art ? <Results artObj={art} /> : "loading"}
+      {art ? (
+        // <Link to={`/${searchTerm}`}>
+        <Results artObj={art} />
+      ) : (
+        // </Link>
+        "loading"
+      )}
     </>
   );
 }

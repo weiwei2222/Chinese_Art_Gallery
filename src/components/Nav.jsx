@@ -3,12 +3,8 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <header className="header">
-      <a href="/">
-        <img
-          className="logo"
-          src="../public/artlogo.png"
-          alt="Chinese Art Gallery"
-        />
+      <a href="/" className="logo">
+        Chinese Art Gallery
       </a>
       <nav className="main-nav">
         <ul className="main-nav-list">

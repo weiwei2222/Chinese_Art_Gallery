@@ -12,7 +12,9 @@
 }
 
 .logo {
-  height: 3rem;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
 }
 
 .footer {
