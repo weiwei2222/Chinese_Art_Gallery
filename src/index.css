@@ -19,3 +19,8 @@ body {
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
 }
+
+p {
+  line-height: 1.5rem;
+  padding: 1rem;
+}

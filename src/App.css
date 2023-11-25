@@ -5,9 +5,10 @@
   background-color: #fdf2e9;
 
   /* Because we want header to be sticky later */
-  height: 7rem;
+  height: 9rem;
   padding: 0 4.8rem;
   position: relative;
+  background: url(https://www.clevelandart.org/sites/default/files/styles/banner/public/banners/1997-99_B_1.jpg?itok=_2RWSgl3);
 }
 
 .logo {
@@ -15,8 +16,9 @@
 }
 
 .footer {
-  display: flex;
-  padding: 40px;
+  padding: 50px;
+  background: #eeeeee;
+  text-align: center;
 }
 
 .main-nav-list {
@@ -31,43 +33,39 @@
 .main-nav-link:visited {
   display: inline-block;
   text-decoration: none;
-  color: #cf711f;
+  color: #fff;
   font-weight: 500;
   font-size: 1.2rem;
   transition: all 0.3s;
 }
 .main-nav-list a:hover {
-  color: #853f03;
-}
-/* MOBILE */
-.btn-mobile-nav {
-  border: none;
-  background: none;
-  cursor: pointer;
-
-  display: none;
+  color: #ffdec1;
 }
 
-.icon-mobile-nav {
-  height: 4.8rem;
-  width: 4.8rem;
-  color: #333;
-}
-
-.icon-mobile-nav[name="close-outline"] {
-  display: none;
-}
 .search {
   width: 100%;
+  margin: 20px;
+  text-align: center;
+}
+.search input {
+  padding: 1em 1.5em;
+  background-color: #d6d6d6;
+  border: 1px #a9a9a9;
+  border-radius: 5em;
+  outline: none;
+  transition: all 0.7s;
+  max-width: none;
 }
 /* result */
 .result {
   height: 100%;
   display: flex;
 }
+
 .result ul li {
   list-style: none;
   width: 200px;
+  height: 430px;
   float: left;
   margin: 20px 30px;
   text-align: center;
@@ -84,4 +82,21 @@
   width: 200px;
   height: 200px;
   object-fit: cover;
+}
+.detail {
+  margin: 50px 40px 80px 40px;
+  text-align: center;
+  line-height: 2.5rem;
+}
+.title {
+  font-weight: 700;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.text {
+  margin: 50px 40px 80px 40px;
+  line-height: 2.5rem;
 }

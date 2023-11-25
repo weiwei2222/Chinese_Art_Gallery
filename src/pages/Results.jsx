@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import OneArt from "./OneArt";
+import OneArt from "../components/OneArt";
 
 function Results({ artObj }) {
   const chinsesArt = artObj.data;

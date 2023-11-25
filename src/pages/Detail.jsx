@@ -24,26 +24,20 @@ function Detail() {
   }, []);
 
   return detail ? (
-    <div>
-      <ul>
-        <li>
-          <span>
-            <img src={detail.images.web.url} />
-          </span>
-          <span>title:{detail.title}</span>
-          <span>
-            title in original language:{detail.title_in_original_language}
-          </span>
-          <span>culture:{detail.culture}</span>
-          <span>
-            inscriptions: {detail.inscriptions.map((ins) => ins.inscription)}
-          </span>
-          <span>
-            inscription translation:{" "}
-            {detail.inscriptions.map((ins) => ins.inscription_translation)}
-          </span>
-        </li>
-      </ul>
+    <div className="detail">
+      <div>
+        <img src={detail.images.web.url} />
+      </div>
+      <div className="title">Title</div>
+      <div>{detail.title}</div>
+      <div className="title">Title in original language</div>
+      <div> {detail.title_in_original_language}</div>
+      <div className="title">Culture</div>
+      <div>{detail.culture}</div>
+      <div className="title">Inscriptions</div>
+      <div> {detail.inscriptions.map((ins) => ins.inscription)}</div>
+      <div className="title">Description</div>
+      <div>{detail.description}</div>
     </div>
   ) : (
     <h1>"loading..."</h1>

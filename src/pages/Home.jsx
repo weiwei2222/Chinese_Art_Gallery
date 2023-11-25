@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Form from "../components/Form";
-import Results from "../components/Results";
+import Results from "../pages/Results";
 
 function Home() {
   const [art, setArt] = useState(null);

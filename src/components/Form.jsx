@@ -23,7 +23,7 @@ function Form(props) {
           onChange={handleChange}
           value={formData.searchterm}
         />
-        <input type="submit" value="submit" />
+        <input type="submit" value="search" />
       </form>
     </div>
   );

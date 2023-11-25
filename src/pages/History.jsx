@@ -2,13 +2,13 @@ import React from "react";
 
 function History() {
   return (
-    <div>
-      <h3>
+    <div className="text">
+      <div className="title">
         Article Source:{" "}
         <a href="https://en.wikipedia.org/wiki/Chinese_art" target="_blank">
           wikipedia
         </a>
-      </h3>
+      </div>
       <p>
         Chinese art is visual art that originated in or is practiced in China,
         Greater China or by Chinese artists. Art created by Chinese residing
