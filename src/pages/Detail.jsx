@@ -4,12 +4,11 @@ import { useParams } from "react-router-dom";
 
 function Detail() {
   let params = useParams();
-  const id = params.id;
+  const id = params.getid;
   const [detail, setDetail] = useState(null);
 
   const getDetail = async (id) => {
     const url = `https://openaccess-api.clevelandart.org/api/artworks/${id}`;
-    console.log(url);
     try {
       const response = await fetch(url);
       const detaildata = await response.json();

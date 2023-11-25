@@ -19,7 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/history" element={<History />} />
           <Route path="/results" element={<Results />} />
-          <Route path="/:id" element={<Detail />} />
+          <Route path="/:getid" element={<Detail />} />
         </Routes>
       </main>
       <Footer />

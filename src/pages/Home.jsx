@@ -2,8 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Form from "../components/Form";
 import Results from "../pages/Results";
-import { Link } from "react-router-dom";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 function Home() {
   const [art, setArt] = useState(null);
@@ -19,7 +18,7 @@ function Home() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setListArt({ searchterm: formData.searchterm });
+    setListArt({ search: formData.searchterm });
     // getArt(formData.searchterm);
   };
 
@@ -49,9 +48,9 @@ function Home() {
       "Landscapes",
       "Leaf",
     ];
-    const aaa = artArray[Math.floor(Math.random() * artArray.length)];
-    const keyword = listArt.get("searchterm");
-    getArt(keyword ? keyword : aaa);
+    const showrandom = artArray[Math.floor(Math.random() * artArray.length)];
+    const keyword = listArt.get("search");
+    getArt(keyword ? keyword : showrandom);
   }, [listArt]);
 
   return (
