@@ -36,8 +36,22 @@ function Home() {
   };
 
   useEffect(() => {
+    const artArray = [
+      "flower",
+      "sun",
+      "luke",
+      "mountain",
+      "water",
+      "birds",
+      "Picture",
+      "Woman",
+      "Orchid",
+      "Landscapes",
+      "Leaf",
+    ];
+    const aaa = artArray[Math.floor(Math.random() * artArray.length)];
     const keyword = listArt.get("searchterm");
-    getArt(keyword);
+    getArt(keyword ? keyword : aaa);
   }, [listArt]);
 
   return (
