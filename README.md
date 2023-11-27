@@ -8,6 +8,7 @@ useSearchParams
 https://nextjs.org/docs/app/api-reference/functions/use-search-params
 https://reactrouter.com/en/main/hooks/use-search-params-rn
 
+react-query
 https://articles.wesionary.team/how-to-implement-infinite-scroll-using-react-query-5fd7c425908f
 
 https://dev.to/brainiacneit/simplify-infinite-loading-with-react-query-48oj

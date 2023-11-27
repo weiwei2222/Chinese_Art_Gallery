@@ -8,10 +8,18 @@ import About from "./pages/About";
 import History from "./pages/History";
 import Results from "./pages/Results";
 import Detail from "./pages/Detail";
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "react-query";
 
+const queryClient = new QueryClient();
 function App() {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Nav />
       <main>
         <Routes>
@@ -23,7 +31,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </>
+    </QueryClientProvider>
   );
 }
 

@@ -62,25 +62,28 @@
 .result {
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.result ul li {
-  list-style: none;
+.list {
   width: 200px;
-  height: 430px;
-  float: left;
+  height: 410px;
   margin: 20px 30px;
   text-align: center;
   line-height: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
-.result ul li a {
+.list a {
   color: rgb(104, 104, 104);
   text-decoration: none;
 }
-.result ul li a:hover {
+.list a:hover {
   color: rgb(62, 62, 62);
 }
-.result ul li img {
+.list img {
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -101,4 +104,18 @@
 .text {
   margin: 50px 40px 80px 40px;
   line-height: 2.5rem;
+}
+.more {
+  width: 100%;
+  display: flex;
+  margin-bottom: 8rem;
+}
+.btn {
+  margin: 0px auto;
+  padding: 1rem;
+  border: none;
+  border-radius: 5em;
+  background: #ffdec1;
+  color: rgb(148, 123, 91);
+  “cursor: pointer;
 }

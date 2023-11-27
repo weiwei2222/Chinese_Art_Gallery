@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Form from "../components/Form";
 import Results from "../pages/Results";
 import { useSearchParams } from "react-router-dom";
+import { useInfiniteQuery } from "react-query";
+import { useInView } from "react-intersection-observer";
 
 function Home() {
   const [art, setArt] = useState(null);
@@ -11,6 +13,7 @@ function Home() {
     searchterm: "",
   });
   const [listArt, setListArt] = useSearchParams();
+  // const { ref, inView } = useInView();
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -52,6 +55,20 @@ function Home() {
     const keyword = listArt.get("search");
     getArt(keyword ? keyword : showrandom);
   }, [listArt]);
+
+  // const { data, isSuccess, hasNextPage, fetchNextPage, isFetchingNextPage } =
+  //   useInfiniteQuery("listmore", ({ pageParam = page }) => getArt(pageParam), {
+  //     getNextPageParam: (lastPage, allPages) => {
+  //       const nextPage =
+  //         lastPage.length === page ? allPages.length + 10 : undefined;
+  //       return nextPage;
+  //     },
+  //   });
+  // useEffect(() => {
+  //   if (inView && hasNextPage) {
+  //     fetchNextPage();
+  //   }
+  // }, [inView, fetchNextPage, hasNextPage]);
 
   return (
     <>

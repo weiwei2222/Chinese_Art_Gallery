@@ -6,8 +6,8 @@ import OneArt from "../components/OneArt";
 function Results({ artObj }) {
   const chinsesArt = artObj.data;
   return (
-    <div className="result">
-      <ul>
+    <>
+      <div className="result">
         {chinsesArt.length ? (
           chinsesArt.map((one, index) => <OneArt one={one} key={index} />)
         ) : (
@@ -15,8 +15,11 @@ function Results({ artObj }) {
             Sorry, no result. Please search other keyword.
           </div>
         )}
-      </ul>
-    </div>
+      </div>
+      <div className="more">
+        <button className="btn">more results</button>
+      </div>
+    </>
   );
 }
 
