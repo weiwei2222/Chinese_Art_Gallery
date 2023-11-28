@@ -13,6 +13,7 @@ function Home() {
     searchterm: "",
   });
   const [listArt, setListArt] = useSearchParams();
+  const [sortBy, setSortBy] = useState("");
   // const { ref, inView } = useInView();
 
   const handleChange = (event) => {
@@ -25,8 +26,12 @@ function Home() {
     // getArt(formData.searchterm);
   };
 
+  const handleSort = (event) => {
+    setSortBy(event.target.value);
+  };
+
   const getArt = async (link) => {
-    const url = `https://openaccess-api.clevelandart.org/api/artworks/?q=${link}&department=Chinese%20Art&has_image=1&skip=${page}&limit=10`;
+    const url = `https://openaccess-api.clevelandart.org/api/artworks/?q=${link}&department=Chinese%20Art&has_image=1`;
 
     try {
       const response = await fetch(url);
@@ -64,11 +69,6 @@ function Home() {
   //       return nextPage;
   //     },
   //   });
-  // useEffect(() => {
-  //   if (inView && hasNextPage) {
-  //     fetchNextPage();
-  //   }
-  // }, [inView, fetchNextPage, hasNextPage]);
 
   return (
     <>
@@ -76,8 +76,11 @@ function Home() {
         formData={formData}
         addhandleChange={handleChange}
         addhandleSubmit={handleSubmit}
+        artObj={art}
+        addhandleSort={handleSort}
+        sortBy={sortBy}
       />
-      {art ? <Results artObj={art} /> : "loading"}
+      {art ? <Results artObj={art} sortBy={sortBy} /> : "loading"}
     </>
   );
 }

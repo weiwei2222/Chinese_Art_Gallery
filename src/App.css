@@ -47,7 +47,8 @@
   margin: 20px;
   text-align: center;
 }
-.search input {
+.search input,
+select {
   padding: 1em 1.5em;
   background-color: #d6d6d6;
   border: 1px #a9a9a9;
@@ -116,4 +117,6 @@
   background: #ffdec1;
   color: rgb(148, 123, 91);
   cursor: pointer;
+}
+.select {
 }

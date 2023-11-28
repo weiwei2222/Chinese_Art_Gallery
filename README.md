@@ -8,6 +8,10 @@ useSearchParams
 https://nextjs.org/docs/app/api-reference/functions/use-search-params
 https://reactrouter.com/en/main/hooks/use-search-params-rn
 
+JS filter
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+https://www.runoob.com/regexp/regexp-syntax.html
+
 react-query
 https://articles.wesionary.team/how-to-implement-infinite-scroll-using-react-query-5fd7c425908f
 
