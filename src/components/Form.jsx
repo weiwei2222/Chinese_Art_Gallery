@@ -17,6 +17,9 @@ function Form({
           value={formData.searchterm}
         />
         <select onChange={addhandleSort} value={sortBy} className="select">
+          <option selected="selected" disabled="disabled" value="">
+            choose dynasty
+          </option>
           <option value="Xia dynasty">Xia dynasty</option>
           <option value="Shang dynasty">Shang dynasty</option>
           <option value="Western Zhou">Western Zhou</option>
