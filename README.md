@@ -2,7 +2,7 @@
 
 <h1>Chinese Art Gallery</h1>
 
-<a href="https://chinese-art-gallery.netlify.app/">Live demo</a>
+<a href="https://chinese-art-gallery.netlify.app/" target="_blank">Live demo</a>
 
 # rescours
 
