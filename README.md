@@ -2,6 +2,8 @@
 
 <h1>Chinese Art Gallery</h1>
 
+<a href="https://chinese-art-gallery.netlify.app/">Live demo</a>
+
 # rescours
 
 useSearchParams
