@@ -23,7 +23,6 @@ function Home() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setListArt({ search: formData.searchterm });
-    // getArt(formData.searchterm);
   };
 
   const handleSort = (event) => {
