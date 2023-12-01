@@ -20,15 +20,19 @@
   background: #eeeeee;
   text-align: center;
 }
-
+.main-nav {
+  display: flex;
+}
 .main-nav-list {
   list-style: none;
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  gap: 4.8rem;
   color: #333;
 }
-
+.main-nav-list li {
+  float: left;
+  padding: 0 1.5rem;
+}
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
