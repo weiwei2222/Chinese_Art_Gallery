@@ -79,12 +79,13 @@ select {
   -webkit-line-clamp: 3;
   overflow: hidden;
 }
-.list a {
-  color: rgb(104, 104, 104);
+.list a:link,
+.list a:visited {
+  color: rgb(102, 102, 102);
   text-decoration: none;
 }
 .list a:hover {
-  color: rgb(62, 62, 62);
+  color: rgb(186, 103, 59);
 }
 .list img {
   width: 200px;
