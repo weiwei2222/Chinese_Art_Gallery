@@ -92,6 +92,9 @@ select {
   text-align: center;
   line-height: 2.5rem;
 }
+.detail img {
+  width: 100%;
+}
 .title {
   font-weight: 700;
   text-align: center;
@@ -117,6 +120,4 @@ select {
   background: #ffdec1;
   color: rgb(148, 123, 91);
   cursor: pointer;
-}
-.select {
 }
