@@ -24,7 +24,7 @@ function Detail() {
 
   return detail ? (
     <div className="detail">
-      <div>
+      <div className="bigimg">
         <img src={detail.images.web.url} />
       </div>
       <div className="title">Title</div>
