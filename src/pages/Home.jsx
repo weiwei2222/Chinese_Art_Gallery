@@ -34,7 +34,9 @@ function Home() {
 
     try {
       const response = await fetch(url);
+      console.log(response);
       const data = await response.json();
+      console.log(data);
       setArt(data);
     } catch (e) {
       console.error(e);
