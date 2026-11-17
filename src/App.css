@@ -126,3 +126,51 @@ select {
   color: rgb(148, 123, 91);
   cursor: pointer;
 }
+
+.loading-text,
+.error-text {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 3rem 1.5rem;
+  color: #555;
+}
+.error-text .btn {
+  display: inline-block;
+  margin: 0.5rem;
+  text-decoration: none;
+}
+
+/* Mobile header: keep title and nav inside the banner, no overflow */
+@media (max-width: 640px) {
+  .header {
+    height: auto;
+    min-height: 5.5rem;
+    padding: 0.9rem 1.2rem;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+  }
+  .logo {
+    font-size: 1.35rem;
+    white-space: nowrap;
+  }
+  .main-nav-list li {
+    padding: 0 0.55rem;
+  }
+  .main-nav-list li:first-child {
+    padding-left: 0;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 1rem;
+  }
+  .detail {
+    margin: 24px 16px 48px;
+  }
+  .result {
+    margin: 0 10px;
+  }
+  .search {
+    margin: 12px 0;
+  }
+}
