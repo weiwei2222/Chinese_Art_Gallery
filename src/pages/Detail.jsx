@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 
+const stripHtml = (s) =>
+  typeof s === "string" ? s.replace(/<[^>]*>/g, "") : s;
+
 function Detail() {
   let params = useParams();
   const id = params.getid; // accession number, e.g. "1980.10"
@@ -90,9 +93,9 @@ function Detail() {
       <div className="title">Culture</div>
       <div>{Array.isArray(detail.culture) ? detail.culture.join(", ") : detail.culture || "—"}</div>
       <div className="title">Inscriptions</div>
-      <div>{inscriptions.length ? inscriptions.map((ins) => ins.inscription) : "—"}</div>
+      <div>{inscriptions.length ? inscriptions.map((ins) => stripHtml(ins.inscription)).join(" ") : "—"}</div>
       <div className="title">Description</div>
-      <div>{detail.description || "—"}</div>
+      <div>{detail.description ? stripHtml(detail.description) : "—"}</div>
     </div>
   );
 }
