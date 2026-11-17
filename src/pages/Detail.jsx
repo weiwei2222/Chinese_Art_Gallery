@@ -1,27 +1,37 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 
 function Detail() {
   let params = useParams();
-  const id = params.getid;
-  const [detail, setDetail] = useState(null);
-  const [status, setStatus] = useState("loading");
+  const id = params.getid; // accession number, e.g. "1980.10"
+  const location = useLocation();
+  const passed = location.state && location.state.art;
+  const [detail, setDetail] = useState(
+    passed && passed.accession_number === id ? passed : null
+  );
+  const [status, setStatus] = useState(detail ? "ok" : "loading");
 
-  const getDetail = async (artId, isRetry = false) => {
-    const url = `https://openaccess-api.clevelandart.org/api/artworks/${artId}`;
+  const getDetail = async (accession, isRetry = false) => {
+    // NOTE: the museum's single-artwork endpoint (/api/artworks/<id>) does not
+    // send CORS headers, so browsers block it. The list endpoint does send
+    // them, and it can look up one artwork by accession_number.
+    const url = `https://openaccess-api.clevelandart.org/api/artworks/?accession_number=${encodeURIComponent(
+      accession
+    )}`;
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const detaildata = await response.json();
-      if (!detaildata.data) throw new Error("No data");
-      setDetail(detaildata.data);
+      const art = detaildata.data && detaildata.data[0];
+      if (!art) throw new Error("No data");
+      setDetail(art);
       setStatus("ok");
     } catch (e) {
       console.error(e);
       if (!isRetry) {
         // The museum API is sometimes slow or flaky; try once more.
-        setTimeout(() => getDetail(artId, true), 1500);
+        setTimeout(() => getDetail(accession, true), 1500);
       } else {
         setStatus("error");
       }
@@ -29,6 +39,11 @@ function Detail() {
   };
 
   useEffect(() => {
+    if (passed && passed.accession_number === id) {
+      setDetail(passed);
+      setStatus("ok");
+      return;
+    }
     setDetail(null);
     setStatus("loading");
     getDetail(id);

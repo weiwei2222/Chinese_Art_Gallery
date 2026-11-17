@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function OneArt({ one }) {
   return (
     <div className="list">
-      <Link to={`/${one.id}`}>
+      <Link to={`/${one.accession_number}`} state={{ art: one }}>
         <span>
           <img src={one.images.web.url} />
         </span>
